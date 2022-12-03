@@ -1,0 +1,384 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+@import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700");
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body {
+  background: #ccc;
+}
+
+.header {
+  background: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  justify-content: center;
+  width: 100%;
+  z-index: 7;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid #a4ad96;
+  padding: 10px 0;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.09;
+  z-index: -4;
+}
+
+.navbar {
+  animation: maubackground 3.5s 1;
+  margin: 0px 10%;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 140px;
+  animation: logoquay 10s infinite;
+  cursor: pointer;
+}
+
+@keyframes logoquay {
+  0% {
+    transform: rotateX(0deg);
+  }
+  75% {
+    transform: rotateX(360deg);
+  }
+}
+
+@keyframes maubackground {
+  0% {
+    transform: rotateY(90deg);
+  }
+  75% {
+    transform: rotateY(0deg);
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+ul.main-menu {
+  display: flex;
+}
+
+ul.main-menu li {
+  margin: 0 5px;
+}
+
+ul.main-menu a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+  position: relative;
+}
+
+ul.main-menu a::after {
+  content: "";
+  height: 1px;
+  width: 0;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  animation: logoquay 1.5s ease infinite;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+@keyframes fade {
+  0% {
+    border: 1px solid #000000;
+  }
+  50% {
+    border: 1px solid #ffffff;
+  }
+  100% {
+    border: 1px solid #000000;
+  }
+}
+
+@keyframes maubt {
+  0% {
+    background: #4cb5f5;
+  }
+  100% {
+    background: #4cb5f5;
+  }
+}
+
+ul.main-menu a:hover::after {
+  width: 100%;
+}
+
+.login-btn {
+  text-decoration: none;
+  color: #000;
+  padding: 10px 20px;
+  margin-right: 20px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 20px;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-btn::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: maubt 15s ease infinite;
+  opacity: 0.2;
+  left: -100%;
+  top: 0;
+  border-radius: 22px 0 30px 25px;
+  transition: all 0.5s ease-in-out;
+}
+
+.login-btn:hover::before {
+  left: 0;
+}
+
+.register-btn {
+  text-decoration: none;
+  color: #000;
+  padding: 10px 20px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 20px;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.register-btn::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: maubt 15s ease infinite;
+  opacity: 0.2;
+  right: -100%;
+  top: 0;
+  border-radius: 0 22px 30px 25px;
+  transition: all 0.5s ease-in-out;
+}
+
+.register-btn:hover::before {
+  right: 0;
+}
+
+.banner {
+  width: 100%;
+  height: 100vh;
+  background-image: url();
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#backtop {
+  width: 40px;
+  height: 40px;
+  background: #353b48;
+  color: lightyellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 45px;
+  right: 20px;
+  cursor: pointer;
+}
+
+#toggle {
+  display: none;
+  color: #353b48;
+  padding: 28px;
+  font-size: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+}
+
+/* EDIT SP */
+
+.edit-header {
+  text-align: center;
+  margin-top: 10px;
+  color: #343a40;
+}
+
+.form {
+  display: block;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.form-group {
+  display: block;
+}
+
+.form-group label {
+  display: block;
+  font-size: 18px;
+}
+
+.form-group input {
+  width: 100%;
+  border: 1px solid #ccc;
+  outline: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.form-group input:focus {
+  border: 1px solid #66afe9;
+  border-radius: 4px;
+  transition: all 0.5s linear;
+}
+
+.search-form {
+  position: relative;
+  width: 75%;
+  margin: 20px auto;
+ 
+}
+
+.search {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  border-radius: 4px;
+  display: block;
+  margin-top: 10px;
+}
+
+.search:focus {
+  border: 1px solid #66afe9;
+  border-radius: 4px;
+  transition: all 0.5s linear;
+}
+
+.search-form label {
+  position: absolute;
+  right: 2px;
+  top: -20px;
+}
+
+/* Footter */
+
+.footer-clean {
+  padding:50px 0;
+  margin-top: 50px;
+  background-color:rgb(255, 255, 255);
+  color:#323437;
+}
+
+.footer-clean h3 {
+  margin-top:0;
+  margin-bottom:12px;
+  font-weight:bold;
+  font-size:16px;
+}
+
+.footer-clean ul {
+  padding:0;
+  list-style:none;
+  line-height:1.6;
+  font-size:14px;
+  margin-bottom:0;
+}
+
+.footer-clean ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.8;
+}
+
+.footer-clean ul a:hover {
+  opacity:1;
+}
+
+.footer-clean .item.social {
+  text-align:right;
+}
+
+@media (max-width:767px) {
+  .footer-clean .item {
+    text-align:center;
+    padding-bottom:20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-clean .item.social {
+    text-align:center;
+  }
+}
+
+.footer-clean .item.social > a {
+  font-size:24px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  border:1px solid #ccc;
+  margin-left:10px;
+  margin-top:22px;
+  color:inherit;
+  opacity:0.75;
+}
+
+.footer-clean .item.social > a:hover {
+  opacity:0.9;
+}
+
+@media (max-width:991px) {
+  .footer-clean .item.social > a {
+    margin-top:40px;
+  }
+}
+
+@media (max-width:767px) {
+  .footer-clean .item.social > a {
+    margin-top:10px;
+  }
+}
+
+.footer-clean .copyright {
+  margin-top:14px;
+  margin-bottom:0;
+  font-size:13px;
+  opacity:0.6;
+}
+
+/* Credit to https://epicbootstrap.com/snippets/footer-with-columns */

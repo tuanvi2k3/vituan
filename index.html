@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="text/css" href="./image/pic.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>NTW Shop</title>
+</head>
+<body onload="render()">
+ 
+    <div class="header">
+        <a href="./index.html">
+          <img src="./image/logo1.png" alt="" class="logo">
+        </a>
+        <nav class="navbar">
+            <ul class="main-menu">
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="#">Sản phẩm</a></li>
+                <li><a href="#">Dịch vụ</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </nav>
+        <div class="btn">
+            <a class="login-btn" href="./DNDK/login.html">Đăng nhập</a>
+            <a class="register-btn" href="./DNDK/signup.html">Đăng ký</a>
+        </div>
+    </div>
+    <div class="banner"></div>
+    <div class="sp">
+      <h1 class="sp-haeder" style="text-align: center; margin: 20px 0;">
+        Sản phẩm
+      </h1>
+      <div class="search-form">
+        <label for="search">Tìm kiếm</label>
+      <input type="text" class="search" id="search" name="search" oninput="searchSp()" placeholder="Search">
+      </div>
+      <div class="contenedorCards">
+     
+      </div>
+    </div>
+    <div id="backtop">
+      <i class="fas fa-chevron-up"></i>
+    </div>
+    
+    <!-- render du lieu -->
+
+    <div class="vewsp">
+
+    </div>
+</body>
+<script src="./index.js"></script>
+<script src="./DNDK/js/login.js"></script>
+</html>

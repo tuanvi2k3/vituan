@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  
+  </head>
+  <body>
+    <div class="wa">
+     
+    </div>
+  </body>
+  <script type="text/javascript">
+    var list_item = document.getElementById("list-row");
+
+    list_item.addEventListener("click", function (e) {
+      if (document.querySelector("#list-row li.active") !== null) {
+        document
+          .querySelector("#list-row li.active")
+          .classList.remove("active");
+      }
+
+      if (e.target.localName != "ul") {
+        e.target.className = "active";
+      }
+
+      var color_name = e.target.getAttribute("colors");
+      var card = document.querySelector(".card");
+      card.style.background = color_name;
+    });
+  </script>
+  <script src="./index.js"></script>
+</html>

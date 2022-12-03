@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="icon" type="text/css" href="../image/pic.png" />
+    <title>Login</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./css/sinup.css" rel="stylesheet" />
+    <link href="css/simple-blog-template.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/header.css">
+  </head>
+  <body>
+    <div class="header">
+        <div id="toggle">
+            <i class='fas fa-bars'></i>
+        </div>
+        <a href="../index.html">
+          <img src="../image/logo1.png" alt="" class="logo">
+        </a>
+        <nav class="navbar">
+            <ul class="main-menu">
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="#">Sản phẩm</a></li>
+                <li><a href="#">Dịch vụ</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </nav>
+        <div class="btn">
+            <a class="login-btn" href="login.html">Đăng nhập</a>
+            <a class="register-btn" href="signup.html">Đăng ký</a>
+        </div>
+    </div>
+    <div id="backtop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+    <!-- Page Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2"></div>
+
+        <!-- Signup content  -->
+        <div class="col-lg-8 signup">
+          <!-- Title -->
+          <h1>Đăng nhập</h1>
+
+          <!-- Login form -->
+          <form autocomplete="off">
+            <div class="form-group">
+              <label for="username">Tên tài khoản</label>
+              <input
+                type="text"
+                title="Tên tài khoản"
+                id="username"
+                class="form-control"
+              />
+              <p class="error"></p>
+            </div>
+
+            <div class="form-group">
+              <label for="passw">Mật khẩu</label>
+              <input type="password" id="passw" title="Mật khẩu" class="form-control" />
+              <p class="error"></p>
+            </div>
+            <p>
+              <button type="button" onclick="DNhap()" class="btn btn-primary">
+                Đăng nhập
+              </button>
+            </p>
+
+            <p>Bạn đã có tài khoản? 
+              <a href="signup.html">Đăng ký</a> hoặc  
+              <a href="editpass.html">Đổi mật khẩu</a>
+            </p>
+          </form>
+          <!-- /form -->
+        </div>
+
+        <div class="col-lg-2"></div>
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <p>Đăng Nhập &copy; Đăng nhập JS 2022</p>
+          </div>
+          <!-- /.col-lg-12 -->
+        </div>
+        <!-- /.row -->
+      </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="./js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="./js/bootstrap.js"></script>
+  </body>
+  <script src="./js/login.js"></script>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/sua.css" />
+    <link rel="stylesheet" href="../css/signup.css" />
+    <title>Login</title>
+  </head>
+  <body onload="render()">
+    <div class="header">
+      <a href="../role.html">
+        <img src="../image/logo1.png" alt="" class="logo" />
+      </a>
+      <nav class="navbar">
+        <ul class="main-menu">
+          <li><a href="#">Trang chủ</a></li>
+          <li><a href="#">Giới thiệu</a></li>
+          <li><a href="#">Sản phẩm</a></li>
+          <li><a href="#">Dịch vụ</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Liên hệ</a></li>
+        </ul>
+      </nav>
+      <a class="register-btn" href="../role.html">Quay lại</a>
+    </div>
+    <h1 class="edit-header">Thêm xóa sửa</h1>
+    <div class="form">
+      <div class="form-group">
+        <label for="namesp">Tên sản phẩm</label>
+        <input
+          title="Tên sản phẩm"
+          id="name"
+          type="text"
+          class="form-input"
+          placeholder="Tên sản phẩm"
+        />
+        <p class="error"></p>
+      </div>
+      <div class="form-group">
+        <label for="description">Mô tả</label>
+        <input
+          title="UserName"
+          id="description"
+          type="text"
+          class="form-input"
+          placeholder="Mô tả"
+        />
+        <p class="error"></p>
+      </div>
+
+      <div class="form-group">
+        <label for="img">Ảnh</label>
+        <input
+          title="Link image"
+          id="img"
+          type="text"
+          class="form-input"
+          placeholder="Ảnh"
+          required
+        />
+        <p class="error"></p>
+      </div>
+      <div class="form-group">
+        <label for="price">Giá gốc</label>
+        <input
+          title="Giá gốc"
+          id="price"
+          type="text"
+          class="form-input"
+          placeholder="Giá gốc"
+        />
+        <p class="error"></p>
+      </div>
+      <div class="form-group">
+        <label for="sale">Giảm giá</label>
+        <input
+          title="Giá giảm"
+          id="sale"
+          type="text"
+          class="form-input"
+          placeholder="Giảm giá"
+        />
+        <p class="error"></p>
+      </div>
+      <div class="form-group">
+        <label for="date">Ngày đăng</label>
+        <input
+          title="Ngày đăng"
+          id="date"
+          type="date"
+          class="form-input"
+          placeholder="Ngày đăng"
+        />
+        <p class="error"></p>
+      </div>
+      <div class="form-group">
+        <input id="id" type="hidden" />
+      </div>
+      <p class="success" style="color: green"></p>
+      <button class="btn btn-success" id="save" onClick="add()">ADD</button>
+      <button class="btn btn-primary" id="update" onClick="loadedit()" style="display: none">
+        UPDATE
+      </button>
+    </div>
+    <div class="search-form">
+      <label for="search">Tìm kiếm</label>
+    <input type="text" class="search" id="search" name="search" oninput="searchSp()" placeholder="Search">
+    </div>
+    <table class="container" id="render"></table>
+    <table class="container" id="ERRORrender"></table>
+    <div class="footer-clean">
+      <footer>
+          <div class="container">
+              <div class="row justify-content-center">
+                  <div class="col-sm-4 col-md-3 item">
+                      <h3>Services</h3>
+                      <ul>
+                          <li><a href="#">Web design</a></li>
+                          <li><a href="#">Development</a></li>
+                          <li><a href="#">Hosting</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-sm-4 col-md-3 item">
+                      <h3>About</h3>
+                      <ul>
+                          <li><a href="#">Company</a></li>
+                          <li><a href="#">Team</a></li>
+                          <li><a href="#">Legacy</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-sm-4 col-md-3 item">
+                      <h3>Careers</h3>
+                      <ul>
+                          <li><a href="https://www.facebook.com/tuan.vivan.94849">Job openings</a></li>
+                          <li><a href="https://twitter.com/tv_dl1">Employee success</a></li>
+                          <li><a href="https://www.instagram.com/tuan.vi.van.203/">Benefits</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-lg-3 item social">
+                    <a href="https://www.facebook.com/tuan.vivan.94849">
+                      <i class="icon ion-social-facebook"></i>
+                    </a>
+                    <a href="https://twitter.com/tv_dl1">
+                      <i class="icon ion-social-twitter"></i>
+                    </a>
+                    <a href="#">
+                      <i class="icon ion-social-snapchat"></i>
+                    </a>
+                    <a href="https://www.instagram.com/tuan.vi.van.203/">
+                      <i class="icon ion-social-instagram"></i>
+                    </a>
+                      <p class="copyright">Company Name © 2018</p>
+                  </div>
+              </div>
+          </div>
+      </footer>
+  </div>
+  </body>
+  </script>
+  <script src="./index.js"></script>
+</html>
